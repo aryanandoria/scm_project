@@ -44,3 +44,20 @@ def fun():
   else:
      result.set(
          "Game Over You Lost")
+def restart():
+  no=random.randint(1,20)
+  result.set("Guess a number between 1 to 20 ")
+  chances.set(5)
+  chances1.set(chances.get())
+
+ent1 = Entry(win, textvariable=choice, width=3,
+             font=('Ubuntu', 50), relief=GROOVE)
+ent1.place(relx=0.5, rely=0.3, anchor=CENTER)
+
+ent2 = Entry(win, textvariable=result, width=50,
+             font=('Courier', 15), relief=GROOVE)
+ent2.place(relx=0.5, rely=0.7, anchor=CENTER)
+
+ent3 = Entry(win, text=chances1, width=2,
+             font=('Ubuntu', 24), relief=GROOVE)
+ent3.place(relx=0.61, rely=0.85, anchor=CENTER)
