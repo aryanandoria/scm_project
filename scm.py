@@ -61,3 +61,24 @@ ent2.place(relx=0.5, rely=0.7, anchor=CENTER)
 ent3 = Entry(win, text=chances1, width=2,
              font=('Ubuntu', 24), relief=GROOVE)
 ent3.place(relx=0.61, rely=0.85, anchor=CENTER)
+msg = Label(win, text='Guess a number between 1 to 20 ',
+            font=("Courier", 25), relief=GROOVE)
+msg.place(relx=0.5, rely=0.09, anchor=CENTER)
+
+msg2 = Label(win, text='Remaninig Chances',
+             font=("Courier", 25), relief=GROOVE)
+msg2.place(relx=0.3, rely=0.85, anchor=CENTER)
+
+try_no = Button(win, width=8, text='TRY', font=(
+    'Courier', 25), command=fun, relief=GROOVE)
+try_no.place(relx=0.5, rely=0.5, anchor=CENTER)
+
+stop = tk.Button(win, text='stop', width=40, command=win.destroy,
+                 bg="red", activebackground="red", relief=GROOVE)
+stop.place(relx=0.25, rely=1, anchor=S)
+
+reset = tk.Button(win, text='Restart', width=40, command=restart,
+                 bg="red", activebackground="red", relief=GROOVE)
+reset.place(relx=0.75, rely=1, anchor=S)
+
+win.mainloop()
